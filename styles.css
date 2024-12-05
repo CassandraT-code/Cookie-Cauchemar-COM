@@ -3,61 +3,26 @@ body {
     font-family: 'Comic Sans MS', sans-serif;
     color: #fff;
     text-align: center;
-  }
-  
-  #container {
+}
+
+#container {
     margin: 50px auto;
     width: 90%;
-  }
-  
-  h1 {
+}
+
+h1 {
     text-shadow: 2px 2px 5px #000;
     font-size: 3em;
     animation: shake 0.5s infinite;
-  }
-  
-  @keyframes shake {
+}
+
+@keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-5px); }
     75% { transform: translateX(5px); }
-  }
-  
-  #cookieButton {
-    padding: 20px 40px;
-    font-size: 1.5em;
-    background-color: #00ff00;
-    border: 5px solid #000;
-    border-radius: 15px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-  }
-  
-  #cookieButton:hover {
-    background-color: #ff0000;
-  }
-  
-  #ads {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    color: yellow;
-    font-weight: bold;
-    font-size: 1.2em;
-    padding: 10px;
-    animation: flash 0.5s infinite;
-  }
-  
-  @keyframes flash {
-    0%, 100% { background-color: #000; color: yellow; }
-    50% { background-color: yellow; color: #000; }
-  }
-  
-  #cookieButton {
+}
+
+#cookieButton {
     padding: 20px 40px;
     font-size: 1.5em;
     background-color: #00ff00;
@@ -69,12 +34,31 @@ body {
     transform: translate(-50%, -50%);
     cursor: pointer;
     transition: transform 1s ease-in-out; /* Smooth transition for rotation */
-  }
-  
-  #cookieButton:active {
-    transform: translate(-50%, -50%) rotate(720deg); /* Rotate the button by 720 degrees (2 full rotations) when clicked */
-  }
-  #uselessButton {
+}
+
+#cookieButton:hover {
+    background-color: #ff0000;
+}
+
+#ads {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: yellow;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 10px;
+    animation: flash 0.5s infinite;
+}
+
+@keyframes flash {
+    0%, 100% { background-color: #000; color: yellow; }
+    50% { background-color: yellow; color: #000; }
+}
+
+#uselessButton {
     padding: 20px 40px;
     font-size: 1.5em;
     background-color: #00ff00; /* Même couleur que le bouton clicker */
@@ -82,12 +66,15 @@ body {
     border-radius: 15px;
     position: absolute;
     cursor: pointer;
-    display: none; /* Caché au départ */
-    transition: transform 1s ease-in-out; /* Transition pour l'animation de déplacement */
+    display: inline-block; /* Affichage permanent */
+    opacity: 1; /* Assurez-vous que l'opacité est à 1 pour le rendre visible */
+    transition: transform 1s ease-in-out, opacity 0.5s ease; /* Ajout de transitions */
   }
   
   #uselessButton:hover {
     background-color: #ff0000; /* Change la couleur en survol */
   }
+  
+  
   
   
