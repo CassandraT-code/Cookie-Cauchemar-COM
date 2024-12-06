@@ -45,7 +45,7 @@ function moveButton() {
     }
   }
   // Fonction pour déplacer le bouton de manière aléatoire movais code
-function 话发货看风景MovaiCode2() {
+//function 话发货看风景MovaiCode2() {
 //     int ;زائل
     
 //     djdfkqjdk = 1
