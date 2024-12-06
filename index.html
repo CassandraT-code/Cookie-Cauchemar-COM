@@ -1,20 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dark UX Cookie Clicker</title>
+  <title>Dark UX Coquillage Clicker</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div id="container">
-    <h1>Cookie? Click It... If You Can!</h1>
+    <h1>Coquillages ? Cliquez... Si vous pouvez !</h1>
+    <P>Attention un clique ne te donne pas toujours un coquillage :D</P>
     <button id="cookieButton">Click Me!</button>
     <button id="uselessButton">Click Me!</button>
+    <button id="toggleShop">Voir Shop</button>
+    <div id="countdown" class="hidden">5</div>
 
-    <p id="counter">Cookies: 0</p>
-    <div id="ads">🔥 BUY NOW! Limited Offer!!! 🔥</div>
+    <p id="counter">Coquillages: 0</p>
+    <div id="ads">SAUVEZ LES POISSONS!!!!</div>
   </div>
+  <div id="shop" class="hidden">
+  <h2>Shop</h2>
+  <div id="autoClickerItem">
+    <p>Auto-Clicker Tortue (1 clic/60s)</p>
+    <p>Prix : 20 coquillages</p>
+    <button id="buyAutoClicker">Acheter</button>
+  </div>
+  <div id="advancedAutoClickerItem">
+    <p>Auto-Clicker Crabe (1 clic/15s)</p>
+    <p>Prix : 40 coquillages</p>
+    <button id="buyAdvancedAutoClicker" disabled>Acheter</button>
+  </div>
+  <div id="cursor1">
+    <p>Auto-Clicker Poisson (1 clic/10s)</p>
+    <p>Prix : 80 coquillages</p>
+    <button id="buyCursor1" disabled>Acheter</button>
+  </div>
+  <div id="cursor2">
+    <p>Auto-Clicker Requin (1 clic/5s)</p>
+    <p>Prix : 160 coquillages</p>
+    <button id="buyCursor2" disabled>Acheter</button>
+  </div>
+  <div id="cursor3">
+    <p>Auto-Clicker Baleine (1 clic/3s)</p>
+    <p>Prix : 320 coquillages</p>
+    <button id="buyCursor3" disabled>Acheter</button>
+  </div>
+</div>
+
+  
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,25 +1,34 @@
 body {
-    background: linear-gradient(45deg, red, yellow);
+    height: 200vh; /* Hauteur de départ pour activer le défilement */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, blue, deepskyblue);
     font-family: 'Comic Sans MS', sans-serif;
     color: #fff;
     text-align: center;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
-#container {
-    margin: 50px auto;
-    width: 90%;
+.new-content {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 1.5em;
+    width: 80%;
+    border: 2px dashed #fff;
+    animation: fadeIn 1s ease;
 }
 
-h1 {
-    text-shadow: 2px 2px 5px #000;
-    font-size: 3em;
-    animation: shake 0.5s infinite;
-}
-
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    75% { transform: translateX(5px); }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #cookieButton {
@@ -70,11 +79,155 @@ h1 {
     opacity: 1; /* Assurez-vous que l'opacité est à 1 pour le rendre visible */
     transition: transform 1s ease-in-out, opacity 0.5s ease; /* Ajout de transitions */
   }
-  
-  #uselessButton:hover {
+
+#uselessButton:hover {
     background-color: #ff0000; /* Change la couleur en survol */
   }
+  #shop {
+    position: fixed; /* Le shop reste toujours visible à droite */
+    right: 0;
+    top: 10%;
+    width: 300px; /* Largeur élargie pour tout afficher */
+    height: 500px; /* Hauteur suffisante pour contenir tous les curseurs */
+    background: linear-gradient(45deg, rgba(0, 102, 204, 0.8), rgba(0, 51, 102, 0.8)); /* Dégradé bleu pour le fond */
+    color: white;
+    border: 3px solid #00bfff; /* Bordure bleue claire */
+    border-radius: 15px; /* Coins arrondis pour un look moderne */
+    overflow-y: auto; /* Active un défilement si le contenu dépasse la hauteur */
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-image: url('https://www.transparenttextures.com/patterns/nautical.png'); /* Texture nautique pour un effet d'océan */
+    background-size: 60px 60px; /* Taille de la texture */
+    z-index: 10;
+}
+
+#shop h2 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #00bfff; /* Couleur bleu clair pour l'en-tête */
+    font-family: 'Segoe UI', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Ombre portée pour un effet plus classe */
+    margin-bottom: 20px;
+}
+
+#shop p {
+    margin: 10px 0;
+    font-size: 1.2em;
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #e0f7fa; /* Couleur cyan clair pour les descriptions */
+}
+
+#shop button {
+    transition: opacity 0.3s ease;
+    width: 100%; /* Les boutons prennent toute la largeur disponible */
+    padding: 12px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    background-color: #00bfff; /* Couleur bleue marine pour les boutons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre pour ajouter de la profondeur */
+}
+
+#shop button:hover {
+    background-color: #1e90ff; /* Couleur bleue foncée au survol */
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+#shop button:disabled {
+    background-color: #cfd8dc; /* Couleur grise pour les boutons désactivés */
+    cursor: not-allowed;
+    color: #90a4ae; /* Texte gris pour les boutons désactivés */
+}
+
+#shop div {
+    margin-bottom: 20px; /* Espacement entre les éléments */
+    background: rgba(0, 51, 102, 0.8); /* Fond légèrement transparent pour chaque item */
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#shop div p {
+    font-size: 1.1em;
+    color: #b2ebf2; /* Texte cyan clair pour chaque élément */
+}
   
+@media (max-width: 768px) {
+    #shop {
+        width: 80%; /* Le shop prend 80% de la largeur de l'écran */
+        left: 10%;  /* Centré horizontalement */
+        top: 20%;   /* Décalé vers le bas */
+    }
+  }
   
+
+  .hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#countdown {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* Style de base du bouton */
+#toggleShop {
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: white; /* Texte en blanc */
+    border: none; /* Pas de bordure */
+    border-radius: 12px; /* Coins arrondis */
+    padding: 15px 32px; /* Espacement autour du texte */
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    cursor: pointer; /* Curseur en forme de main lors du survol */
+    transition: all 0.3s ease; /* Transition fluide pour les changements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile pour l'effet 3D */
+  }
   
+  /* Effet de survol */
+  #toggleShop:hover {
+    background-color: #45a049; /* Changer la couleur de fond lorsqu'on survole */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Augmenter l'ombre lors du survol */
+  }
+  
+  /* Effet d'activation */
+  #toggleShop:active {
+    background-color: #388e3c; /* Couleur de fond lorsque l'on clique */
+    transform: scale(0.98); /* Réduire légèrement la taille du bouton lors du clic */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Réduire l'ombre lors du clic */
+  }
+  
+  /* Ajout d'un effet de transition de texte */
+  #toggleShop {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #toggleShop:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #toggleShop:hover:before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+  }
   
