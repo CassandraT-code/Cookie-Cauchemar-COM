@@ -1,6 +1,7 @@
 # Cookie-Cauchemar-COM
 
 Ce projet est un jeu de type "clicker" dans lequel l'objectif est de collecter des coquillages en cliquant sur un bouton et en achetant des améliorations automatiques pour augmenter la vitesse de collecte.
+https://cassandrat-code.github.io/Cookie-Cauchemar-COM/
 
 ## Fonctionnalités principales
 - **Collecte de coquillages** : Cliquez sur le bouton pour récolter des coquillages. Vous pouvez améliorer votre efficacité en achetant des éléments comme l'auto-clicker, des curseurs et d'autres améliorations.
